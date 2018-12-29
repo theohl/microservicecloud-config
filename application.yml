@@ -2,16 +2,12 @@ spring:
 	profiles:
 		active:
 		- dev
-
 ---
-
 spring:
 	profiles: dev        #开发环境
 	application:
-		name: microservicecloud-config-liuhao-dev
-		
+		name: microservicecloud-config-liuhao-dev	
 ---
-
 spring:
 	profiles: test
 	application:
