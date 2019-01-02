@@ -19,17 +19,15 @@ spring:
       min-idle: 5
       initial-size: 5
       max-total: 5
-      max-wait-millis: 200
-
-#eureka      
+      max-wait-millis: 200     
 eureka:
   client:
     service-url:
 #      defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: microservicecloud-dept8001-dev     #
-    prefer-ip-address: true    #ip
+    instance-id: microservicecloud-dept8001-dev
+    prefer-ip-address: true
 mybatis:
   config-location: classpath:mybatis/mybaits.cfg.xml
   type-aliases-package: com.liuhao.springcloud.entities
@@ -51,17 +49,15 @@ spring:
       min-idle: 5
       initial-size: 5
       max-total: 5
-      max-wait-millis: 200
-
-#eureka      
+      max-wait-millis: 200      
 eureka:
   client:
     service-url:
 #      defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka/
   instance:
-    instance-id: microservicecloud-dept8001-test     #
-    prefer-ip-address: true    #ip
+    instance-id: microservicecloud-dept8001-test
+    prefer-ip-address: true
 mybatis:
   config-location: classpath:mybatis/mybaits.cfg.xml
   type-aliases-package: com.liuhao.springcloud.entities
