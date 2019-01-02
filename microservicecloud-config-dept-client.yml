@@ -1,0 +1,68 @@
+spring:
+ profiles:
+  active:
+  - dev
+---
+server:
+ port: 8001
+spring:
+ profiles: dev
+ application:
+  name: microservicecloud-config-dept-client
+ datasource:
+  type: com.alibaba.druid.pool.DruidDataSource
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/cloudDB01
+  username: root
+  password: hl781006
+  dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+#eureka      
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: microservicecloud-dept8001-dev     #
+    prefer-ip-address: true    #ip
+mybatis:
+  config-location: classpath:mybatis/mybaits.cfg.xml
+  type-aliases-package: com.liuhao.springcloud.entities
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+---
+server:
+ port: 8001
+spring:
+ profiles: test
+ application:
+  name: microservicecloud-config-dept-client
+ datasource:
+  type: com.alibaba.druid.pool.DruidDataSource
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/cloudDB01
+  username: root
+  password: hl781006
+  dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+#eureka      
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/
+  instance:
+    instance-id: microservicecloud-dept8001-test     #
+    prefer-ip-address: true    #ip
+mybatis:
+  config-location: classpath:mybatis/mybaits.cfg.xml
+  type-aliases-package: com.liuhao.springcloud.entities
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
